@@ -1,11 +1,12 @@
-<mvc:View controllerName="masterdetail.masterdetail.controller.View1" xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+<mvc:View xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" controllerName="masterdetail.masterdetail.controller.View1" displayBlock="true">
     <Page>
         <customHeader>
             <OverflowToolbar>
                 <content>
-                    <ToolbarSpacer />
-                    <Title text="Order Summary Master-Detail" />
-                    <ToolbarSpacer />
+                    <ToolbarSpacer/>
+                    <Title text="Order Summary Master-Detail"/>
+                    <ToolbarSpacer/>
+                    <Button xmlns="sap.m" text="Next View" id="button0" press=".nextView"/>
                 </content>
             </OverflowToolbar>
         </customHeader>
@@ -16,29 +17,29 @@
                         <Table id="idProductsTable" items="{/Order_Details}" inset="false">
                             <columns>
                                 <Column>
-                                    <Text text="OrderID" />
+                                    <Text text="OrderID"/>
                                 </Column>
                                 <Column>
-                                    <Text text="ProductID" />
+                                    <Text text="ProductID"/>
                                 </Column>
                                 <Column>
-                                    <Text text="UnitPrice" />
+                                    <Text text="UnitPrice"/>
                                 </Column>
                                 <Column>
-                                    <Text text="Quantity" />
+                                    <Text text="Quantity"/>
                                 </Column>
                                 <Column>
-                                    <Text text="Discount" />
+                                    <Text text="Discount"/>
                                 </Column>
                             </columns>
                             <items>
                                 <ColumnListItem type="Navigation" press=".onPressNavToDetail" custom:to="detail2">
                                     <cells>
-                                        <Text text="{OrderID}" />
-                                        <Text text="{ProductID}" />
-                                        <Text text="{UnitPrice}" />
-                                        <Text text="{Quantity}" />
-                                        <Text text="{Discount}" />
+                                        <Text text="{OrderID}"/>
+                                        <Text text="{ProductID}"/>
+                                        <Text text="{UnitPrice}"/>
+                                        <Text text="{Quantity}"/>
+                                        <Text text="{Discount}"/>
                                     </cells>
                                 </ColumnListItem>
                             </items>
@@ -46,35 +47,18 @@
                     </Page>
                     <Page id="detail2" title="Product" showNavButton="true" navButtonPress="onBackProducts" backgroundDesign="Solid">
                         <VBox class="sapUiSmallMargin">
-                            <f:SimpleForm
-                                id="SimpleFormDisplay354"
-                                editable="false"
-                                layout="ResponsiveGridLayout"
-                                labelSpanXL="3"
-                                labelSpanL="3"
-                                labelSpanM="3"
-                                labelSpanS="12"
-                                adjustLabelSpan="false"
-                                emptySpanXL="4"
-                                emptySpanL="4"
-                                emptySpanM="4"
-                                emptySpanS="0"
-                                columnsXL="1"
-                                columnsL="1"
-                                columnsM="1"
-                                singleContainerFullSize="false"
-                            >
+                            <f:SimpleForm id="SimpleFormDisplay354" editable="false" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
                                 <f:content>
-                                    <Label text="Product name" />
-                                    <Text text="{/ProductName}" />
-                                    <Label text="Supplier ID" />
-                                    <Text text="{/SupplierID}" />
-                                    <Label text="Quantity/Unit" />
-                                    <Text text="{/QuantityPerUnit}" />
-                                    <Label text="unit Price" />
-                                    <Text text="{/UnitPrice}" />
-                                    <Label text="Units on Order" />
-                                    <Text text="{/UnitsOnOrder}" />
+                                    <Label text="Product name"/>
+                                    <Text text="{/ProductName}"/>
+                                    <Label text="Supplier ID"/>
+                                    <Text text="{/SupplierID}"/>
+                                    <Label text="Quantity/Unit"/>
+                                    <Text text="{/QuantityPerUnit}"/>
+                                    <Label text="unit Price"/>
+                                    <Text text="{/UnitPrice}"/>
+                                    <Label text="Units on Order"/>
+                                    <Text text="{/UnitsOnOrder}"/>
                                 </f:content>
                             </f:SimpleForm>
                         </VBox>
@@ -84,7 +68,7 @@
                     <Page id="master" title="Orders" backgroundDesign="List">
                         <List id="ShortProductList" items="{/Orders}" itemPress=".onListItemPress">
                             <items>
-                                <StandardListItem title="{OrderID}" type="Navigation" custom:to="detail" />
+                                <StandardListItem title="{OrderID}" type="Navigation" custom:to="detail"/>
                             </items>
                         </List>
                     </Page>

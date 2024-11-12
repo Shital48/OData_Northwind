@@ -53,6 +53,12 @@ sap.ui.define([
                     // Log.error("SplitApp object can't be found");
                 }
                 return result;
+            },
+            nextView:function(){
+                console.log("Button pressed");
+            // Navigation logic based on selected radio button
+            var oRouter1 = sap.ui.core.UIComponent.getRouterFor(this); 
+                oRouter1.navTo("View2");   
             }
         });
     });

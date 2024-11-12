@@ -1,0 +1,30 @@
+<mvc:View controllerName="masterdetail.masterdetail.controller.View2" xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+    <Page>
+        <Table id="idProducts" items="{/results}" inset="false">
+            <columns>
+                <Column>
+                    <Text text="ID"/>
+                </Column>
+                
+            </columns>
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <Text text="{OrderID}"/>
+                        
+                    </cells>
+                </ColumnListItem>
+            </items>
+
+
+        </Table>
+
+        <Page title="Orders">
+                        <List items="{/results}">
+                            <items>
+                                <StandardListItem title="{OrderID}"/>
+                            </items>
+                        </List>
+        </Page>
+    </Page>
+    </mvc:View>
