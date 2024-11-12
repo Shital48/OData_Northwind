@@ -17,7 +17,7 @@
                         <Table id="idProductsTable" items="{/Order_Details}" inset="false">
                             <columns>
                                 <Column>
-                                    <Text text="OrderID"/>
+                                    <Text text="LastName"/>
                                 </Column>
                                 <Column>
                                     <Text text="ProductID"/>

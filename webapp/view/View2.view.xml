@@ -1,16 +1,16 @@
 <mvc:View controllerName="masterdetail.masterdetail.controller.View2" xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
     <Page>
-        <Table id="idProducts" items="{/results}" inset="false">
+        <Table id="idProducts" items="{/Suppliers}" inset="false">
             <columns>
                 <Column>
-                    <Text text="ID"/>
+                    <Text text="Supplier ID"/>
                 </Column>
                 
             </columns>
             <items>
                 <ColumnListItem>
                     <cells>
-                        <Text text="{OrderID}"/>
+                        <Text text="{SupplierID}"/>
                         
                     </cells>
                 </ColumnListItem>
@@ -20,9 +20,9 @@
         </Table>
 
         <Page title="Orders">
-                        <List items="{/results}">
+                        <List items="{/Suppliers}">
                             <items>
-                                <StandardListItem title="{OrderID}"/>
+                                <StandardListItem title="{CompanyName}"/>
                             </items>
                         </List>
         </Page>
